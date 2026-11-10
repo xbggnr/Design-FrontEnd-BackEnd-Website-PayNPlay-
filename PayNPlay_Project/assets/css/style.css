@@ -1,0 +1,65 @@
+
+:root {
+    --bg-main: #121212;
+    --bg-card: #1E1E1E;
+    --text-main: #F5F5F5;
+    --text-muted: #A0A0A0;
+    --accent-orange: #FF5722;
+    --accent-green: #00E676;
+    --border-color: #333333;
+}
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 80px;
+}
+a { color: var(--text-main); text-decoration: none; }
+.navbar { background-color: var(--bg-main); border-bottom: 1px solid var(--border-color); }
+.search-bar { background-color: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-main); }
+.search-bar:focus { background-color: var(--bg-card); color: var(--text-main); box-shadow: none; border-color: var(--accent-orange); }
+.btn-orange { background-color: var(--accent-orange); color: white; font-weight: bold; border: none; }
+.btn-orange:hover { background-color: #E64A19; color: white; }
+.btn-green { background-color: var(--accent-green); color: black; font-weight: bold; border: none; }
+.btn-green:hover { background-color: #00C853; color: black; }
+.card-game {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+}
+.card-game:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255, 87, 34, 0.2);
+    border-color: var(--accent-orange);
+}
+.card-game img { height: 150px; object-fit: cover; }
+.badge-category { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; }
+.section-title { font-weight: bold; margin-bottom: 20px; color: var(--text-main); }
+
+/* Top-up Page Styles */
+.form-control-dark { background-color: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-main); }
+.form-control-dark:focus { background-color: var(--bg-card); color: var(--text-main); border-color: var(--accent-orange); box-shadow: 0 0 0 0.25rem rgba(255, 87, 34, 0.25); }
+.nominal-box { border: 2px solid var(--border-color); border-radius: 8px; padding: 15px; text-align: center; cursor: pointer; transition: 0.2s; background: var(--bg-card); }
+.nominal-box:hover { border-color: #555; }
+.nominal-box.active { border-color: var(--accent-orange); background-color: rgba(255, 87, 34, 0.1); }
+.payment-method { border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; margin-bottom: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); }
+.payment-method:hover { border-color: var(--accent-orange); }
+.payment-method.active { border-color: var(--accent-orange); }
+.sticky-checkout { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--bg-card); border-top: 1px solid var(--border-color); padding: 15px 0; z-index: 1000; box-shadow: 0 -4px 10px rgba(0,0,0,0.5); }
+.summary-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; position: sticky; top: 20px; }
+
+/* Dashboard */
+.sidebar { background: var(--bg-card); border-radius: 12px; padding: 20px; border: 1px solid var(--border-color); }
+.sidebar-link { display: block; padding: 10px 15px; color: var(--text-muted); border-radius: 8px; margin-bottom: 5px; }
+.sidebar-link:hover, .sidebar-link.active { background: rgba(255,255,255,0.05); color: var(--text-main); }
+.table-dark { --bs-table-bg: transparent; --bs-table-color: var(--text-main); --bs-table-border-color: var(--border-color); }
+.status-sukses { color: var(--accent-green); }
+.status-pending { color: #FFC107; }
+.status-gagal { color: #F44336; }
+
+/* Auth Page */
+.auth-wrapper { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.auth-card { background: var(--bg-card); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); width: 100%; max-width: 400px; }
